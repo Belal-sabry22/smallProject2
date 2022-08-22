@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./javaScript.js" async></script>
+    <title>Fresh food </title>
+
+</head>
+<body>
+    <div class="freshFood">
+        <div class="head">
+            <h2>FreshFood</h2>
+            
+        </div>
+        <div class="inputs">
+     <input placeholder="Iteam Name" type="text " id="title" >
+            <div class="price">
+                <input onkeyup="getTotal()" placeholder="price" type="number " id="price" >
+                <input onkeyup="getTotal()" placeholder="discount" type="number " id="discount" >
+                <small id="total"></small>
+
+            </div>
+            <input placeholder="quantity" type="number " id="quantity" >
+            <input placeholder="category" type="text " id="category" >
+            <button onclick="submit()" type="button" id="pass">creat</button>
+        </div>
+       
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchIteam(this.value)" placeholder="search" type="text " id="search" >
+                <div class="btnSearch">
+                    <button type="button" onclick="getSearchBtn(this.id)" id="searchCategory">Search By Category</button>
+
+                    <button type="button" onclick="getSearchBtn(this.id)" id="searchTitle">Search By Title</button>
+                </div>
+            </div>
+            <div id="deleteAll"> </div>
+            <table>
+                <tr>
+                    <th>IN CART</th>
+                    <th>price,$</th>
+                    <th>quantity</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
